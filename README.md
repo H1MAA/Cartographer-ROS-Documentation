@@ -77,7 +77,7 @@ ___
 * The main arguments are:
     *    ``-configuration_directory`` which specifies the directory of the config file
     * ``-configuration_basename`` which specifies the name of the conffig file you are going to use
-* For more information about the arguments of thi node, refer to the [ API Documentation](https://google-cartographer-ros.readthedocs.io/en/latest/ros_api.html#services)
+* For more information about the arguments of thi node, refer to the [ API Documentation](https://google-cartographer-ros.readthedocs.io/en/stable/ros_api.html)
 * Here is a basic example of how it can be written in a launch file
     ```XML
     <node name="cartographer_node" pkg="cartographer_ros"
@@ -97,3 +97,15 @@ ___
             type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
     ```
 * **You will find some launch files related to our use cases in launch/cartographer in our repo.**
+
+
+### **Running Localization Only**
+
+* **To use Cartographer in localization only mode, you need a ``.pbstream`` file of your map**
+* Next is to run cartographer_node with a ```-load_state_filename``` argument and by defining the following line in your lua config:
+
+    ```lua
+    TRAJECTORY_BUILDER.pure_localization_trimmer = {
+        max_submaps_to_keep = 3,
+    }
+    ```
