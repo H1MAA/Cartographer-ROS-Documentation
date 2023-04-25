@@ -87,7 +87,8 @@ ___
         output="screen">
     </node>
     ```
-**Second is crtogrpaher_occupancy_grid_node.**\
+**Second is crtogrpaher_occupancy_grid_node.**
+
 * This node is very important to us as it provides us with the map of the occupancy grid. 
 * We can then visualize this map in RViz
     ```XML
