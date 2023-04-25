@@ -68,8 +68,9 @@ IMAGE PLACE HOLDER
 ## Step 3 - Running Cartographer
 ___
 
-### **Launch Files**
+### **Running SLAM**
  * **To setup a launch file for Cartographer, you need to launch two nodes.**
+ * **Before running the launch file, make sure to run all other launch files necessary (LIDAR, Odomotery, IMU).
 
 **First is crtogrpaher_node.**
 * The node takes a few arguments to set up.
@@ -95,3 +96,4 @@ ___
     <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
             type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
     ```
+* **You will find some launch files related to our use cases in launch/cartographer in our repo.**
