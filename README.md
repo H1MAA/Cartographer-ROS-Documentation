@@ -60,6 +60,7 @@ IMAGE PLACE HOLDER
     ``
     IF YOU ENCOUNTER ANY PROBLEMS RELATED TO TRANSFORMS MAKE SURE YOUR TF TREE AND FRAMES ARE DEFINED PROPERLY
     ``
+    
     ``
     Aditionally, If you are using odomotery data but the /odom Topic is not publishing or has a different name, you may encounter a TF error message
     ``
@@ -92,4 +93,4 @@ ___
     ```XML
     <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
             type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
-    ```****
+    ```
